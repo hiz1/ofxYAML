@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		37769B3815B7A27100883999 /* yaml-cpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37769B3415B7A27100883999 /* yaml-cpp.a */; };
 		37769B3915B7A27100883999 /* ofxYAML.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37769B3615B7A27100883999 /* ofxYAML.cpp */; };
+		3931E65E1996FB8F001435E0 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3931E65D1996FB8F001435E0 /* CoreVideo.framework */; };
+		3931E65F1996FBA0001435E0 /* yaml-cpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3931E65B1996FB46001435E0 /* yaml-cpp.a */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
@@ -85,9 +86,11 @@
 		37769B3115B7A27100883999 /* stlnode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stlnode.h; sourceTree = "<group>"; };
 		37769B3215B7A27100883999 /* traits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = traits.h; sourceTree = "<group>"; };
 		37769B3315B7A27100883999 /* yaml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yaml.h; sourceTree = "<group>"; };
-		37769B3415B7A27100883999 /* yaml-cpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "yaml-cpp.a"; sourceTree = "<group>"; };
 		37769B3615B7A27100883999 /* ofxYAML.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxYAML.cpp; sourceTree = "<group>"; };
 		37769B3715B7A27100883999 /* ofxYAML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxYAML.h; sourceTree = "<group>"; };
+		3931E6571996FAB6001435E0 /* yaml-cpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "yaml-cpp.a"; path = "../libs/lib/osx/yaml-cpp.a"; sourceTree = "<group>"; };
+		3931E65B1996FB46001435E0 /* yaml-cpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "yaml-cpp.a"; sourceTree = "<group>"; };
+		3931E65D1996FB8F001435E0 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
@@ -116,6 +119,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3931E65F1996FBA0001435E0 /* yaml-cpp.a in Frameworks */,
+				3931E65E1996FB8F001435E0 /* CoreVideo.framework in Frameworks */,
 				E4EB6799138ADC1D00A09F29 /* GLUT.framework in Frameworks */,
 				E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */,
 				E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */,
@@ -130,7 +135,6 @@
 				E4C2424710CC5A17004149E2 /* AppKit.framework in Frameworks */,
 				E4C2424810CC5A17004149E2 /* Cocoa.framework in Frameworks */,
 				E4C2424910CC5A17004149E2 /* IOKit.framework in Frameworks */,
-				37769B3815B7A27100883999 /* yaml-cpp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,8 +153,8 @@
 		37769B1715B7A27100883999 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				3931E6591996FB46001435E0 /* lib */,
 				37769B1815B7A27100883999 /* include */,
-				37769B3415B7A27100883999 /* yaml-cpp.a */,
 			);
 			name = libs;
 			path = ../libs;
@@ -205,6 +209,22 @@
 			);
 			name = src;
 			path = ../src;
+			sourceTree = "<group>";
+		};
+		3931E6591996FB46001435E0 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				3931E65A1996FB46001435E0 /* osx */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		3931E65A1996FB46001435E0 /* osx */ = {
+			isa = PBXGroup;
+			children = (
+				3931E65B1996FB46001435E0 /* yaml-cpp.a */,
+			);
+			path = osx;
 			sourceTree = "<group>";
 		};
 		BB4B014C10F69532006C3DED /* addons */ = {
@@ -262,6 +282,8 @@
 		E4B69B4A0A3A1720003C02F2 = {
 			isa = PBXGroup;
 			children = (
+				3931E65D1996FB8F001435E0 /* CoreVideo.framework */,
+				3931E6571996FAB6001435E0 /* yaml-cpp.a */,
 				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
 				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
 				E4B69E1C0A3A1BDC003C02F2 /* src */,
@@ -318,6 +340,8 @@
 /* Begin PBXProject section */
 		E4B69B4C0A3A1720003C02F2 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "example-ofxYAML" */;
 			compatibilityVersion = "Xcode 2.4";
 			developmentRegion = English;
@@ -538,6 +562,7 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_52)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					/Users/teruhisa/of_v0.8.3_osx_release/addons/ofxYAML_0800/libs/lib/osx,
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../libs\"";
 				PREBINDING = NO;
@@ -626,6 +651,7 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_50)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					/Users/teruhisa/of_v0.8.3_osx_release/addons/ofxYAML_0800/libs/lib/osx,
 				);
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../libs\"";
 				PREBINDING = NO;
